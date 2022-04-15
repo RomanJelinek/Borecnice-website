@@ -1,0 +1,15 @@
+.tourist__map__container {
+  background-image: url('../../files/img/borecniceMap.png');
+  background-size: cover;
+  background-position: 52% 50%;
+  height: 100vw;
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 460px) {
+  .tourist__map__container {
+    height: 1000px;
+    width: 100vw;
+  }
+}

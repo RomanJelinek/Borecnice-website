@@ -1,0 +1,59 @@
+.modal__overlay {
+    height:  100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000000a5;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spot__info {
+  text-align: justify;
+  background: black;
+  width: 800px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -350px; /* Negative half of height. */
+  margin-left: -350px; /* Negative half of width. */
+  overflow: auto;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+@media (max-width: 460px) {
+  .spot__info {
+    top:0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 100vh;
+    overflow: scroll;
+  }
+}
+
+.spot__text__container {
+  padding: 15px;
+  color: #c6d19d;
+}
+
+.spot__text__container h2 {
+  text-align: center;
+}
+
+.spot__button {
+  margin-top: 40px;
+  background-color: #4ca634;
+  border: 'none' !important;
+  outline: none !important;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30%;
+  text-align: center;
+  padding: 10px 0;
+  margin: 40px auto 20px auto;
+}

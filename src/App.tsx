@@ -1,12 +1,17 @@
-import React from 'react';
-import './App.css';
+import { Header } from '../src/components/header/Header';
+import TouristMap from './components/touristMap/TouristMap';
+import { BorecniceData } from './context/BorecniceContext';
 
-function App() {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <BorecniceData>
+        <TouristMap />
+      </BorecniceData>
     </div>
   );
-}
+};
 
 export default App;
+
+

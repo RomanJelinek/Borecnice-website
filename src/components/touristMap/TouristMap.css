@@ -9,7 +9,8 @@
 
 @media (max-width: 460px) {
   .tourist__map__container {
-    height: 1000px;
+      background-position: 57% 50%;
+    height: 850px;
     width: 100vw;
   }
 }

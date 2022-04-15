@@ -63,31 +63,31 @@ const SpotModal: React.FC<SpotInfoProps> = ({ spotInfo }) => {
           animate="visible"
           exit="exit"
         >
-          <div className="spot__text__container">
-            <h2>{spotInfo.headline}</h2>
-            <p>{spotInfo.text}</p>
-            <Gallery photos={spotInfo.pictures} onClick={openLightbox} />
-            <ModalGateway>
-              {viewerIsOpen ? (
-                <Modal onClose={closeLightbox}>
-                  <Carousel
-                    currentIndex={currentImage}
-                    views={spotInfo.pictures.map((x: any) => ({
-                      ...x,
-                      srcset: x.srcSet,
-                      caption: x.title,
-                    }))}
-                  />
-                </Modal>
-              ) : null}
-            </ModalGateway>
-            <div
-              className="spot__button"
-              onClick={() => spotState.setSpotOpen(false)}
-            >
-              Zpět na mapu
+            <div className="spot__text__container">
+              <h2>{spotInfo.headline}</h2>
+              <p>{spotInfo.text}</p>
+              <Gallery photos={spotInfo.pictures} onClick={openLightbox} />
+              <ModalGateway>
+                {viewerIsOpen ? (
+                  <Modal onClose={closeLightbox}>
+                    <Carousel
+                      currentIndex={currentImage}
+                      views={spotInfo.pictures.map((x: any) => ({
+                        ...x,
+                        srcset: x.srcSet,
+                        caption: x.title,
+                      }))}
+                    />
+                  </Modal>
+                ) : null}
+              </ModalGateway>
+              <div
+                className="spot__button"
+                onClick={() => spotState.setSpotOpen(false)}
+              >
+                X
+              </div>
             </div>
-          </div>
         </motion.div>
       </SpotBackDrop>
     </>
